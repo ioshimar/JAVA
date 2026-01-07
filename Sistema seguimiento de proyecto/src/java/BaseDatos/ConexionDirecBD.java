@@ -19,7 +19,7 @@ public class ConexionDirecBD {
            // informacion para acceder a la base de datos
     String bd ="db_directorio"; // nombre de la base de datos 
     String login = "seg_curt_cons";  // usuario con permisos para acceder a la base de datos
-    String password = "CURT";  // contraseña del usuario para la BD
+    String password = "";  // contraseña del usuario para la BD
     String url = "jdbc:postgresql://10.153.3.25:5434/"+bd;  
     // variables para el manejo de la BD
     public Statement stmt = null;
@@ -98,3 +98,4 @@ public class ConexionDirecBD {
     }
     
 }
+

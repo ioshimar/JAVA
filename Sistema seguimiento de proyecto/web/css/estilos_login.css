@@ -1,0 +1,576 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 15-may-2017, 10:01:40
+    Author     : RICARDO:MACIAS
+*/
+
+
+
+
+*{
+	 /*border: 0;*/
+	 margin: 0;
+	 padding: 0;
+}
+
+body{
+	/*background:#f7f5f5;*/
+}
+
+@font-face {
+   font-family: "CarroisGothic-Regular";
+ 	src: url('../fonts/CarroisGothic-Regular.eot');
+	src: url('../fonts/CarroisGothic-Regular.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/CarroisGothic-Regular.woff') format('woff'),
+     	 url('../fonts/CarroisGothic-Regular.ttf') format('truetype'),
+     	 url('../fonts/CarroisGothic-Regular.svg#CarroisGothic-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}	
+
+@font-face {
+   font-family: "CarroisGothicSC-Regular";
+ 	src: url('../fonts/CarroisGothicSC-Regular.eot');
+	src: url('../fonts/CarroisGothicSC-Regular.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/CarroisGothicSC-Regular.woff') format('woff'),
+     	 url('../fonts/CarroisGothicSC-Regular.ttf') format('truetype'),
+     	 url('../fonts/CarroisGothicSC-Regular.svg#CarroisGothicSC-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+img{max-width: 100%;}
+
+h4.estilo{
+    font-family: arial;
+    font-size: 12px;
+    font-weight: bold;
+    color:#75a375;
+}
+.captura{
+    width: auto;
+    border: 1px solid #999;
+    font-family: Arial;
+    font-size: 11px;
+}
+
+td.ambitoPrincipal{
+  font-weight: bold;/*ancho de letra en este caso negrita*/
+  font-size: 15px;/*tamaÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â±o de letra*/
+   font-family: Arial;
+   background: #72aeaf;
+  color:#fff;
+  
+  text-align: center;
+}
+
+.ambito{
+ 
+      font-size: 9pt;/*tamaÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â±o de letra*/
+  font-family: Arial;
+ /* text-align: center;*/
+}
+
+.ambito3{
+    font-size: 8px;
+}
+
+.ambitoBold{
+  font-size: 11pt;/*tamaÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â±o de letra*/
+  font-family: Arial;
+  font-weight: bold;
+ /* text-align: center;*/
+}
+
+
+h4.registro{
+    font-size: 10pt;
+    font-weight: bold;
+    font-family: Arial;
+}
+
+.Estilo2 {
+    font-family: Arial;
+    font-size: 10pt;
+    color: #FFF;
+    background: #217273;
+}
+
+td.Estilo2Centro {
+    font-family: Arial;
+    font-size: 10pt;
+    color: #FFF;
+    text-align: center;
+    border: 2px solid #fff;
+    background: #217273;
+}
+
+.azul{
+	width:auto;
+	color:#a4c8a4;
+	border:0px;
+	font-family:Arial;
+	font-size:11px;
+	background-color: #a4c8a4;		
+	}	
+        
+        
+ .texto1{
+	width:auto;
+	color:#000000;
+	border:1px none;
+	font-family:Arial;
+	font-size:11px;	
+        font-weight:normal;		
+	text-transform: uppercase;
+	}
+        
+     .texto2{
+	color:#000000;
+	font-family:Arial;
+	font-size:20px;	
+        font-weight:bold;		
+	text-transform: uppercase;
+	}   
+        
+  .titulo1{
+      color:#000000;
+	border:0px;
+	font-family:Arial;		
+	font-size: 12px;
+	font-weight:bold;
+	}
+        
+  .titulo2{
+       width: auto;
+	color:#FFFFFF;
+	border:0px;
+	font-family:Arial;	
+	font-size:12px;
+	font-weight:bold;
+	/*background-color: #75a375*/
+	}
+        
+ .despliegue {
+	width:auto;
+	border:1px none;
+	font-family:Arial;
+	font-size:10px;
+	font-weight:normal;		
+	text-transform: uppercase;
+}
+.requerido {
+	font-family: Arial;
+	font-size: 10px;
+	font-weight: normal;		
+	text-transform: none;
+	color: #990000;
+}
+
+table{
+    background: #fff;
+    text-align: left;
+    font-family: Arial;
+    border-collapse: collapse;
+    border: #000;
+    margin-right: auto;
+    margin-left: auto;
+   
+}
+
+td, th { 
+padding: 4px 3px; 
+
+		}
+                
+                /* Zebra striping */
+	tr:nth-of-type(odd) { /*nones*/
+            background: #f7fefd; 
+	}
+	
+	tr:nth-of-type(even) { /*pares*/
+		background: #FFF; 
+	}
+
+
+tr.hov:hover {
+   /* background-color: #a4c8a4;*/
+    background-color: #aedcde;
+}
+
+table.hov tr:hover{
+   /* background-color: #a4c8a4;*/
+     background-color: #aedcde;
+}
+
+
+tr.hov:hover img{
+ 
+}
+
+
+
+/*table td{border: 0.2px solid #999;}*/
+
+
+/*nuevos estilos*/
+
+#contenedor-login{
+	   position: absolute;
+  	   top: 40%; 
+ 	   left: 50%;
+ 	   transform: translate(-50%,-50%);
+	   -moz-transform: translate(-50%,-50%);
+	   -webkit-transform: translate(-50%,-50%);
+	   -o-transform: translate(-50%,-50%);
+	   -ms-transform: translate(-50%,-50%);
+	   background: #f7f7f7;
+	   padding:5% 1%;
+	   width:100%;
+       text-align: center;
+       max-width: 400px;
+       border: 1px double #999;
+       border-radius: 5px;
+       -webkit-box-shadow: 5px 5px 60px 0 #BABABA;
+	   box-shadow: 5px 5px 60px 0 #BABABA;
+}
+
+#contenedor-login1{
+	   position: absolute;
+  	   top: 60%; 
+ 	   left: 50%;
+ 	   transform: translate(-50%,-50%);
+	   -moz-transform: translate(-50%,-50%);
+	   -webkit-transform: translate(-50%,-50%);
+	   -o-transform: translate(-50%,-50%);
+	   -ms-transform: translate(-50%,-50%);
+	   background: #f7f7f7;
+	   padding:5% 1%;
+	   width:100%;
+       text-align: center;
+       max-width: 400px;
+       border: 1px double #999;
+       border-radius: 5px;
+       -webkit-box-shadow: 5px 5px 60px 0 #BABABA;
+	   box-shadow: 5px 5px 60px 0 #BABABA;
+}
+
+#tit_sistema{
+    background: rgba(19,105,159,0.4);
+    padding: 1% 2%;
+    font-family: "CarroisGothicSC-Regular";
+    position: absolute;
+    top: 0;
+    left: -5px;
+    border-radius: 38px 5px 45px 0;
+    color: #001b7b;
+    width: 85%;
+-moz-transform: rotate(-15deg) translateX(-50px) translateY(10px);
+-webkit-transform: rotate(-15deg) translateX(-50px) translateY(10px);
+-o-transform: rotate(-15deg) translateX(-50px) translateY(10px);
+-ms-transform: rotate(-15deg) translateX(-50px) translateY(10px);
+transform: rotate(-15deg) translateX(-50px) translateY(10px);
+
+
+
+}
+
+
+h4.teclear{
+     /*font-family: "CarroisGothicSC-Regular";*/
+     font-family:Century Gothic;
+    font-size: 18px;
+    color:#000000;
+    font-weight:bold;
+}
+
+
+#c1{ 
+    width: 100%;
+   /* font-family: "CarroisGothicSC-Regular";*/
+    font-family:Arial;
+    padding: 1% 0;
+   /* font-weight: bold;*/
+     max-width: 300px;
+     margin: 0 auto;
+     text-align: left;
+     font-size: 16px;
+}
+
+#c2{width: 100%; 
+    max-width: 300px;
+    margin: 0 auto;
+    
+    text-align: left;}
+
+.div_relative{
+    position: relative;
+}
+
+div.alert_psw{
+    background: rgba(20, 151, 224, 0.9019607843137255);
+    position:absolute;
+    padding:2% 2%;
+    top:-15px;
+    left:60%;
+    width:60%;
+    border-radius:15px 10px 15px 0;
+    border:1px solid #ffffff;
+    color:#ffffff;
+     font-family: "CarroisGothic-Regular";
+     font-size:13px;
+     display: none;
+}
+
+
+#c2 img#imag_es{
+   width: 30px;
+   height: 30px;
+
+}
+
+#c2 img, #c2 select, #c2 input{
+    display: inline-block;
+    vertical-align: middle;
+    }
+
+    #c2 img{ 
+    	border: 1px solid #98989e; 
+   	    padding:2.5px 4px;
+   	    border-right:none;
+   	    border-radius: 6px 0 0 6px;
+   	    background:#dedede;}
+
+input[type="password"],input[type="text"],select{
+    width: 80%;
+    padding: 8px 4px;
+    max-width: 300px;
+    border: 1px solid #98989e;
+    
+    /*border-top: none;*/
+   /* border-right: none;*/
+    border-left: none;
+    font-size: 14px;
+  border-radius: 0 6px 6px 0;
+     font-family: "CarroisGothic-Regular";
+    background: none;
+}
+
+#boton{
+    width: 100%;
+    margin-top: 4%;
+    text-align: center;
+  
+}
+
+#boton a{
+       max-width: 280px;
+           width: 100%;
+           padding: 5px 1%;
+           background: #136A9F;
+           font-size: 18px;
+           border-radius: 5px;
+           color: #fff;
+           cursor: pointer;
+           font-family: Arial;
+           text-decoration: none;
+    
+}
+
+#boton a:hover{
+    
+        border:2px solid #069;
+          -webkit-box-shadow: 0px 0px 11px 1px rgba(85,150,230,1);
+          -moz-box-shadow: 0px 0px 11px 1px rgba(85,150,230,1);
+           box-shadow: 0px 0px 11px 1px rgba(85,150,230,1);
+           background: #3737ad;
+}
+
+
+
+
+#boton2{
+    width: 100%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    text-align: center;
+  
+}
+
+#boton2 a{
+       max-width: 280px;
+           width: 100%;
+           padding: 5px 1%;
+           background: #136A9F;
+           font-size: 18px;
+           border-radius: 5px;
+           color: #fff;
+           cursor: pointer;
+           font-family: Arial;
+           text-decoration: none;
+    
+}
+
+#boton2 a:hover{
+    
+        border:2px solid #069;
+          -webkit-box-shadow: 0px 0px 11px 1px rgba(85,150,230,1);
+          -moz-box-shadow: 0px 0px 11px 1px rgba(85,150,230,1);
+           box-shadow: 0px 0px 11px 1px rgba(85,150,230,1);
+           background: #3737ad;
+}
+
+
+        input[type="submit"],  input[type="button"]{
+           max-width: 300px;
+           width: 80%;
+           padding: 5px 0;
+           background: #136A9F;
+           font-size: 18px;
+           border-radius: 5px;
+           border:none;
+           color: #fff;
+           cursor: pointer;
+           font-family: Arial;
+       }
+       
+       
+             input:focus {
+           border:1px solid #069;
+          -webkit-box-shadow: 0px 0px 11px 1px rgba(85,150,230,1);
+          -moz-box-shadow: 0px 0px 11px 1px rgba(85,150,230,1);
+           box-shadow: 0px 0px 11px 1px rgba(85,150,230,1);
+           border-top: none;
+           border-right: none;
+           border-left:none;
+           
+           }
+        
+           
+          
+           
+           
+           #contenedor-login img#size-personal{
+               width: 20%;
+           }
+           
+           input[type="text"].oculto{
+               width: 100%;
+               text-align: center;
+               border: none;
+               font-size: 12px;
+               
+               
+           }     
+           
+           #link{
+               text-align: right;
+               font-family: arial;
+               font-size: 14px;
+               max-width: 280px;
+               margin: 0 auto;
+           }
+           
+           #tit_inicio{
+              
+               padding-top:1%;
+               margin: 0 auto;
+               width: 60%;
+               font-family: arial;
+           }
+           
+         #tit_inicio a{
+            text-decoration: none;
+            color: #fff;
+             border: 1px solid;
+             padding: 5px;
+            border-radius: 5px;
+            border-color: #069;
+            font-weight: bold;
+            background: #0c3969;
+        }
+            #tit_inicio a:hover{
+                background: #069;
+                color:#fff;
+            }
+            
+            #fec{
+                text-align: right;
+                font-family: arial;
+                width: 70%;
+                margin: 0 auto;
+                font-size: 13px;
+            }
+            
+          /*  #result{
+                background: #ff0000a3;
+                width: 98%;
+                position:absolute;
+                top:0;
+                padding:1% ;
+                z-index:1;
+                font-family:arial;
+                font-weight:bold;
+                color:#fff;
+            }  */
+          
+                    section#R1{
+				display:none;
+				padding:1% 0;
+				font-family:Century Gothic;
+				background:rgba(255, 49, 0, 0.65);
+				color:#fff;
+				/*background:#4688d7;
+				color:#fff;*/
+				position:fixed;
+				text-align:center;
+				width:100%;
+				z-index:2;
+				top:0px;
+				} 
+				
+				
+				#result, #cerrarDiv{
+					display:inline-block;
+					vertical-align:middle;
+					margin:0 auto;
+					text-align:left;
+					font-weight:bold;
+					width:70%;}
+					
+					
+                                #cerrarDiv{width:auto;}
+                                section#R1 img{ cursor:pointer;}
+				
+            
+            
+            .letras_peq{
+                font-family: arial;
+                font-size: 10.2px;
+                color: #006633;
+            }
+            
+            .negrita{
+                font-weight: bold;
+            }
+            
+            .text5{
+                font-family: Arial;
+                font-size: 12px;
+                
+            }
+            
+            .text_gray{
+                color: #990000;
+            }
+            
+            
+            input.error{
+                background: #FAD8F4;
+                border-color: red;
+                
+            }

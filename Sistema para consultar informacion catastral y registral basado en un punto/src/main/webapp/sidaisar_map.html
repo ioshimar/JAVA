@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Visualizador WMTS SIDAISAR (EPSG:6365)</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v9.2.4/ol.css">
+    <style>
+        /* Estilos para que el mapa ocupe toda la pantalla */
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden; /* Evita barras de scroll innecesarias */
+        }
+        #map {
+            width: 100%;
+            height: 100%;
+            background-color: #e9e9e9;
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.11.0/proj4.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ol@v9.2.4/dist/ol.js"></script>
+
+    <script>
+        // --- PASO 1: Definir la proyección personalizada EPSG:6365 ---
+        // Se le "enseña" a la librería qué significa EPSG:6365 usando su definición Proj4.
+        proj4.defs('EPSG:6365', '+proj=lcc +lat_0=19 +lon_0=-102 +lat_1=17.5 +lat_2=29.5 +x_0=2500000 +y_0=0 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs');
+        ol.proj.proj4.register(proj4);
+
+        // --- PASO 2: Configurar los detalles del servicio WMTS (extraídos de tu XML) ---
+
+        // URL del servicio
+        const wmtsUrl = 'http://10.153.3.20:85/geowebcache/service/wmts';
+
+        // Identificador de la capa: <Layer><ows:Identifier>SIDAISAR</ows:Identifier></Layer>
+        const layerIdentifier = 'SIDAISAR';
+
+        // Identificador del conjunto de matrices: <TileMatrixSet><ows:Identifier>EPSG:6365</ows:Identifier></TileMatrixSet>
+        const matrixSetIdentifier = 'EPSG:6365';
+        
+        // Extensión de la capa en metros. NOTA: Tu XML no define un BoundingBox para la capa,
+        // por lo que he usado una extensión estándar para México en EPSG:6365.
+        // Si el mapa aparece recortado o desplazado, estos son los valores que deberías ajustar.
+        const layerExtent = [1486369, 437635, 3513630, 1562364]; // [minX, minY, maxX, maxY]
+
+        // Resoluciones calculadas a partir de los <ScaleDenominator> de tu XML.
+        const resolutions = [
+            16832.02887405617, 8416.014429188099, 4208.007214594049, 2104.0036072970243, 
+            1052.0018036485121, 526.0009018242561, 263.00045091212803, 131.50022545606401, 
+            65.75011272803201, 32.875056364016, 16.437528182008, 8.218764091004, 
+            4.109382045502, 2.054691022751, 1.0273455113755, 0.51367275568775, 
+            0.256836377843875
+        ];
+
+        // IDs de las matrices (niveles de zoom). El código los genera automáticamente de 0 a 16.
+        const matrixIds = new Array(resolutions.length);
+        for (let i = 0; i < resolutions.length; ++i) {
+            matrixIds[i] = matrixSetIdentifier + ':' + i;
+        }
+
+        // --- PASO 3: Crear el mapa con OpenLayers ---
+
+        // Definir el objeto de la proyección para OpenLayers
+        const mapProjection = ol.proj.get('EPSG:6365');
+        mapProjection.setExtent(layerExtent);
+
+        // Crear la capa WMTS
+        const wmtsLayer = new ol.layer.Tile({
+            source: new ol.source.WMTS({
+                url: wmtsUrl,
+                layer: layerIdentifier,
+                matrixSet: matrixSetIdentifier,
+                format: 'image/png', // Formato definido en tu XML
+                projection: mapProjection,
+                tileGrid: new ol.tilegrid.WMTS({
+                    // Origen de la grilla (esquina superior izquierda de la extensión)
+                    origin: ol.extent.getTopLeft(layerExtent),
+                    resolutions: resolutions,
+                    matrixIds: matrixIds
+                }),
+                style: '', // Por defecto es el estilo base
+                wrapX: false
+            })
+        });
+
+        // Crear el objeto del mapa
+        const map = new ol.Map({
+            target: 'map', // El ID del div en el HTML
+            layers: [
+                wmtsLayer // Añadimos nuestra capa WMTS
+            ],
+            view: new ol.View({
+                projection: mapProjection,
+                center: ol.extent.getCenter(layerExtent), // Centra el mapa
+                zoom: 2, // Nivel de zoom inicial (0 es el más alejado)
+                maxZoom: 16 // Corresponde al número de resoluciones - 1
+            })
+        });
+
+    </script>
+</body>
+</html>

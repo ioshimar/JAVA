@@ -13,7 +13,7 @@ public class ConexionProdCurt {
        // informacion para acceder a la base de datos
     String bd ="curt"; // nombre de la base de datos 
     String login = "user_prod_consulta";  // usuario con permisos para acceder a la base de datos
-    String password = "Us3r_C0ns";  // contraseña del usuario para la BD
+    String password = "";  // contraseña del usuario para la BD
     String url = "jdbc:postgresql://10.153.3.21:5433/"+bd;  
     // variables para el manejo de la BD
     public Statement stmt = null;
@@ -92,3 +92,4 @@ public class ConexionProdCurt {
     }
     
 }
+

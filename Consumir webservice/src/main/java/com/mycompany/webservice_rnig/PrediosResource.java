@@ -18,7 +18,7 @@ public class PrediosResource {
     // --- Constantes de Conexión ---
     private static final String DB_URL      = "jdbc:postgresql://10.153.3.25:5434/db_directorio";
     private static final String DB_USER     = "serv_wms";
-    private static final String DB_PASSWORD = "serv_2025";
+    private static final String DB_PASSWORD = "";
     private static final String DB_SCHEMA   = "inf_vec_cat";
     private static final String DB_TABLE    = "predios_temp";
 
@@ -117,3 +117,4 @@ public Response buscarPorCoordenada(@QueryParam("x") Double lon,
         return s.replace("\"", "\\\"");
     }
 }
+

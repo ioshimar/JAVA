@@ -1,0 +1,170 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 20/07/2017, 12:05:49 PM
+    Author     : RICARDO.MACIAS
+*/
+
+@media screen and (max-width:850px){  /*Menu Responsive*/
+
+header{
+	 width:100%;
+	 position:fixed;
+	 top:auto;
+	 padding:0;
+        z-index: 25333;}
+	
+	
+	
+	#Cont-Cabecera{
+		margin-top:46px;}
+
+#logo, #nav{
+	display:block;
+	width:100%;
+}
+	#logo{ display:none;}
+	
+	section#contenido-cabecera{
+		margin-top:40px; /*lo que mide el menu*/
+		
+	}	
+
+	body{
+		/*padding-top:80px;*/} /*lo que mide el menu*/
+		
+        
+        
+        
+		
+		
+	
+		
+		.menu_bar{   
+			display:block;  /*Aparecemos El icono del Menu*/
+			width:100%;
+			position:fixed;
+                       z-index:25553336;  /*Uno mas que el header*/
+			top:0;
+                        background:#073f79;}
+			
+		.menu_bar .bt-menu{
+			display:block;
+			padding:5px;
+			color:#FFF;
+			overflow:hidden;/*Sirve para que no muestre el contenido que sobra*/
+			font-size:20px;
+			font-weight:bold;
+			text-decoration:none;
+			}
+			
+			.menu_bar span{
+				float:right;
+				padding-right:10px;
+				padding-top:5px;
+				font-size:25px;} /*Mandaremos el Icono a la Derecha*/
+                        
+                        
+                        .menu_bar.administrador{
+                                background: #032d57;
+                        }
+				
+		header #nav{
+			width:50%;
+			position:fixed;
+			right:-100%;
+			 background:#073f79;
+			margin:0;
+			overflow: scroll; /*Para navegar sobre el menu cuando no quepa el contenido*/
+			height:calc(100% - 46px);  /*Se ajustara exactamente*/
+			padding-top:46px;
+			/*height:100%;*/
+			text-align:center;
+                         z-index:25553336; 
+			} 
+                        
+                        
+                        header #nav.administrador{background: #032d57;}
+                        
+			
+                      
+	
+	
+	header #nav li{ 
+            display:block;
+            padding: 2% 0;
+            border-bottom: 1px solid rgba(255,255,255,.5);}
+	
+	
+	
+			select{ 
+                            /*border:none;*/
+			/*float:right;*/
+			/*margin-top:3%;*/}
+	
+	header #nav li a{ display:block}
+	
+	header #nav li .children{
+		width:100%;
+		position:relative;/*Para que los Menus que le siguen bajen al momento de hace HOVER y los Submnus no los tapen*/
+		} 
+				
+				header #nav li:hover .children{
+					display:block;} /*Para no desplegarlo Con HOVER (Lo desplegaremos con un click, con JQuery)*/
+	
+	header #nav li .children li a{
+		margin-left:20px;}
+		
+		header #nav li .caret{
+			float:right;} /*Mandar la flechita a la derecha*/
+			
+			
+			
+			
+			/*)---------Estilos PERSONALIZADOS--------*/
+                    #contenedor-admin{
+                        margin-top: 20px;
+                   }
+                   
+                   #margen-oculto{
+                  padding-top: 40px;  /*lo que mide el header*/
+                    }
+		
+		
+        
+        ul.text-left,  ul.text-right{
+                            width: 90%;
+                            display: block;
+                            text-align: left;}
+        
+     #nav li ul.hijo li a{
+                padding: 2%;
+               text-align: center;
+         }
+                        
+                        ul.hijo{  
+                           /* display:block;   /*Ocultar los SubMenus*/
+                             width: 80%;
+                             text-align: right;
+                             font-size: 11px;
+                             left: -15%;
+                             position: relative;
+                          } 
+                          
+                          
+                          
+              header #nav li.padre_notif{
+		display:inline-block;
+		border:none;
+		width:auto;
+		float:right;
+		width:auto;
+		position:relative;
+	}            
+              
+
+            
+	}

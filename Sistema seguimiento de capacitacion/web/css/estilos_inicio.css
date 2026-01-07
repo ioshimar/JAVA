@@ -1,0 +1,646 @@
+ /*
+    Created on :24-may-2017, 11:45:00
+    Author     :Ricardo.Macias
+*/
+
+
+
+*{
+	 border: 0;
+	 margin: 0;
+	 padding: 0;
+}
+
+
+
+@font-face {
+   font-family: "CarroisGothic-Regular";
+ 	src: url('../fonts/CarroisGothic-Regular.eot');
+	src: url('../fonts/CarroisGothic-Regular.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/CarroisGothic-Regular.woff') format('woff'),
+     	 url('../fonts/CarroisGothic-Regular.ttf') format('truetype'),
+     	 url('../fonts/CarroisGothic-Regular.svg#CarroisGothic-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}	
+
+@font-face {
+   font-family: "CarroisGothicSC-Regular";
+ 	src: url('../fonts/CarroisGothicSC-Regular.eot');
+	src: url('../fonts/CarroisGothicSC-Regular.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/CarroisGothicSC-Regular.woff') format('woff'),
+     	 url('../fonts/CarroisGothicSC-Regular.ttf') format('truetype'),
+     	 url('../fonts/CarroisGothicSC-Regular.svg#CarroisGothicSC-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gotham-Book";
+ 	src: url('../fonts/Gotham-Book.eot');
+	src: url('../fonts/Gotham-Book.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/Gotham-Book.woff') format('woff'),
+     	 url('../fonts/Gotham-Book.ttf') format('truetype'),
+     	 url('../fonts/Gotham-Book.svg#Gotham-Book') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+img{max-width: 100%;}
+ 
+article,figcaption,figure,footer,header,hgroup,nav,section{
+	display: block;
+	
+}
+
+html
+{
+    position: relative; 
+    min-height: 100%;
+}
+body
+{
+    margin-bottom:6%;
+    background-image: url("../circ_form.png");
+    background-size: cover;
+    background:#dedede;
+       background:#fbfbfb;
+
+}
+
+
+
+
+
+
+  body {color:#000000;
+	border:0px;
+	font-family:Arial;		
+	font-size:10px;
+	font-weight:bold;}
+  
+  
+ h2 {}
+
+ /*Caja contenedora*/   
+ #Cont-menu{
+     margin: 0 auto;
+     text-align: center;
+     width: 100%;
+  
+     margin-top:5%;
+     /*max-width: 1300px;*/
+    
+ }
+ 
+ #cabecera{
+    border: 0px;
+    font-family: Arial;
+    font-weight: bold;
+    
+    background: #f1fffe;
+    background:#073f79;
+    color: #ffffff;
+    /* color: #2a2b2d; */
+    padding: 1%;
+    border-radius:5px;
+   border-bottom:4px solid #b6f9f0;
+    border-bottom:4px solid #6fc2bb;
+    margin:0 auto;
+    text-align: center;
+ }		
+
+ #cabecera span.titulo2{
+     margin:0; 
+     font-family: "CarroisGothicSC-Regular";
+     font-size: 35px;
+ }
+ 
+ #cabecera span.text_small{
+     font-size: 25px;
+ }
+ 
+ 
+ 
+ #cabecera_admin{
+    border: 0px;
+    font-family: Arial;
+    font-weight: bold;
+    background: #000;
+    color: #ffffff;
+    /* color: #2a2b2d; */
+    padding: 1%;
+    border-radius:5px;
+   border-bottom:4px solid #b6f9f0;
+    border-bottom:4px solid #6fc2bb;
+    margin:0 auto;
+    text-align: center;
+ }		
+
+ #cabecera_admin  span.titulo2{
+     margin:0; 
+     font-family: "CarroisGothicSC-Regular";
+     font-size: 35px;
+ }
+ 
+ #cabecera_admin span.text_small{
+     font-size: 25px;
+ }
+
+ 
+ 
+ #log,#Text-Tit,#usuario{
+     display: inline-block;
+     width: 75%;
+     vertical-align: middle;
+     margin: 0 auto;
+     
+ }
+
+ 
+  
+ 
+ #Text-Tit{
+     width: auto;
+     text-align: left;
+ }
+ 
+ 
+ #usuario{
+     width: 50%;
+     text-align: right;
+     font-size: 15px;
+  
+     
+ }
+ 
+/*
+ #usuario a, #usuario p{
+     display: block;
+ }
+ 
+ 
+
+ */
+  span.nom_usu{
+     color: #ffffff;
+    font-size: 16px;
+    text-decoration: underline;
+ }
+ 
+ #usuario li{
+     display: inline-block;
+     vertical-align: middle;
+     list-style: none;
+    /* background: #12af49;*/
+     position: relative;
+     width: auto;
+     cursor: pointer;
+     
+ }
+/* #usuario li#cerrar{ width: 100%; padding:  1% 0;}*/
+
+ #usuario li.submenu{ width: auto; padding-left:3%;}
+ 
+
+ #usuario li#principal{ margin-right: 2%;}
+
+ .submenu span img{
+     width: 50px;
+     height: 50px;
+ } 
+ 
+ .submenu span{ position: relative;}
+ 
+ .submenu #num_notif{
+     position: absolute;
+     background:#f00;
+     top:0;
+     right:0;
+     border-radius:50px;
+     padding-left:7px;
+     padding-right:7px;
+     font-size:20px;
+ }
+
+
+  ul.children{  
+	 display:none;   /*Ocultar los SubMenus*/
+	 position:absolute;  /*Esto es clave para que se que no se vea feo el menu*/
+         z-index:1000;
+          width: 300%;
+         margin-top:0px;
+         text-align: left;
+         left: -200%;
+        
+	
+	 } 
+	 
+         
+       #usuario li ul.children li{
+             width: 90%;
+             display: block;
+             /*background: #136A9F; */
+             background: #0089ff;
+             color: #fff; 
+             padding-left:4%;
+             border-radius: 20px 0px 20px 20px;
+              /*border: 1px solid #ccc;*/
+              margin-top: 2px;
+         }
+      
+       #usuario li ul.children li:hover{ background:  #0566b9;}
+         
+  ul.children a li  { 
+     font-size: 12px;
+     font-family: arial;
+     font-weight: bold;
+            
+  }
+         
+  ul.children li a{ 
+    font-family: arial;
+    font-size: 12px;
+    color: #000;
+    border-radius: 5px;
+    background: #fff;
+  }
+         
+         
+         
+ ul.children a{text-decoration: none;}
+         
+ 
+ #usuario li:hover .children{display:block; } /*Aparecer los Submenus con El Hover*/
+ 
+ 
+/* #usuario li#cerrar a{
+    text-decoration: none;
+    margin-top: 1%;
+    font-size: 11px;
+    color: #fff;
+    border: 1px solid;
+    padding: 1px 4px;
+    background: #981919;
+    border-radius: 4px;
+  
+ }*/
+ /*#usuario li#cerrar a:hover{
+     background: #cd0a0a;
+ }
+ */
+ 
+ 
+ 
+   ul.hijo{  
+	/*display:none;   /*Ocultar los SubMenus*/
+	 position:absolute;  /*Esto es clave para que se que no se vea feo el menu*/
+         z-index:1000;
+         width: 100%;
+         font-family: arial;
+	 margin-top:0px;
+         text-align: right;
+         font-size: 11px;
+         left: 5%;
+       } 
+
+      ul.admin_sbmnu{
+      	display:none;
+      } 
+       
+        li:hover .hijo{display:block;  } /*Aparecer los Submenus con El Hover*/
+       
+  #usuario li ul.hijo li{
+             width: 100%;
+             display: block;
+           /* background: #8FB0CF;*/
+             border-radius: 5px;
+             padding-top: 12px;
+         }
+         
+         
+         #usuario li ul.hijo li a{
+                text-decoration: none;
+                font-size: 11px;
+                color: #fff;
+                border: 1px solid;
+                padding: 1.5% 4%;
+                background: #981919;
+                border-radius: 4px;
+         }
+         #usuario li ul.hijo li a:hover{
+              background: #cd0a0a;
+            }
+
+		 #usuario li ul.hijo li.psw a{
+                
+                padding: 3% 4%;
+                background: #21ff16;
+                color:#000;
+                border-radius: 4px;
+         }
+         #usuario li ul.hijo li.psw a:hover{
+               background: #e6e4e4;
+                color:#000;
+            }
+            
+          
+            
+          #usuario li ul.hijo li.psw1 a{
+                
+                padding: 3% 4%;
+                background: #9ba09a;
+                color:#000;
+                border-radius: 4px;
+         }
+         #usuario li ul.hijo li.psw1 a:hover{
+               background: #e6e4e4;
+                color:#000;
+            }
+  
+ 
+ 
+ #log{
+    /* max-width: 80px;*/   /*13/07/2018*/
+    max-width:150px;
+     width: 100%;
+     padding-right: 2%;
+ }
+
+        #navbar li {
+            list-style: none;
+            margin:1%;
+            display: inline-block;
+            width:12%;
+       
+            /* width: 20%;
+      /*      padding:% 0;*/
+            /*background: #002F5B;*/
+           background-color: #f3f5f5;
+           background-color:#f3f3f3;
+            /*background: #136A9F;*/
+            border-radius: 15px;
+            border:3px solid #b7f9f0;
+             border-bottom:4px solid #6fc2bb;
+             border-right: 4px solid #6fc2bb;
+			padding:1% 0;
+            position: relative;
+            font-size: 15px;
+            vertical-align: middle;
+          /*  margin-top: 2%;*/
+            font-family: "CarroisGothic-Regular";
+        }
+        
+      /*  #navbar li#n1{
+            background: url("../images/Insc.png");
+            background-size: contain;
+            /*background-color: #026c95;*/
+       /* }*/
+        
+        #li_txt{
+          /*  background: #02a4e4;*/
+            background: #f3f3f3;
+            position: absolute;
+            border-radius:5px;
+            width: 100%;
+           /* color:#fff;*/
+            color:#083f78;
+            padding:3% 0;
+       		font-size:22px;
+            bottom:0;
+           
+        }
+        
+        
+        
+       #navbar li:hover{
+            background: #074078;  }
+        
+        li#oculto {
+            background: none;
+            display: none;
+           
+        }
+        
+     /*   #navbar li img{
+            width: 40px;
+            height: 40px;
+        }*/
+    
+ #navbar li a {
+   color: #fff;
+    text-decoration: none; }
+ 
+/*
+     #navbar li#n1 { display: none;}
+     #navbar li#n3 ul a#uest{display: none;}
+*/
+
+
+.no_disponible{
+    display: none;
+}
+
+
+
+ #navbar li ul {
+    display: none; /*La lista inicialmente no se muestra debido a display:none; */
+     position: absolute;
+    top: 100%;
+    z-index: 10;
+    font-size: 12px;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    padding:1% ;
+    
+ }
+ 
+ #navbar li ul li{
+     display: block;
+     vertical-align: middle;
+     width: 150%;
+    margin: 1px auto;
+    /* background: #006600;*/
+    /* background:#88c5eb;*/
+    background-color: #083f78; 
+      /*background: #03908A;*/
+    /*background: #3a688a;*/
+     border:1px solid #000;
+     text-align: left;
+     padding: 4% 0;
+     padding-left: 1%;
+      border-radius: 5px;
+      margin-bottom: 2%;
+ }
+ 
+ #navbar li ul li:hover{
+      /*background: #60C5C1;*/
+      background-color: #1466bb;
+     /* background: #002D5E;*/
+ }
+    
+ #navbar li:hover ul {
+    display: block; /*Al situar el cursor sobre el item la lista de subitems pasa de display none a display block y se muestra*/
+
+    }
+ 
+        
+ #foot{
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+ }
+     
+ #foot img{
+           width: 100%;
+ }
+
+
+#tit_inicio{
+    font-size: 18px;
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 2%;
+    
+}
+
+#tit_inicio a{
+    text-decoration: none;
+    color: #069;
+    border: 1px solid;
+    padding: 5px;
+    border-radius: 5px;
+}
+#tit_inicio a:hover{
+    background: #069;
+    color:#fff;
+}
+
+
+
+
+
+
+
+@media(max-width: 1500px){
+   #Cont-menu{
+     width: 100%;
+     max-width: 1300px;
+
+   }
+      
+   #navbar li { 
+      width: 20%;
+   }
+        
+   li#oculto {
+     display:inline-block;
+     padding:0;
+     border:none;
+   }
+  /*   20/04    
+   #navbar li img{
+      width: 60px;
+      height: 60px;
+   }*/
+}
+
+
+@media(max-width:1350px){
+    #usuario{ width: 35%;}
+}
+
+
+@media(max-width:1030px){
+   #usuario{
+      width: 100%; 
+      padding-top: 1%;
+   }
+    
+   #Text-Tit{
+      width: 80%;
+   }
+}
+
+
+
+@media(max-width: 1100px){
+    #navbar li img{
+        width: 40px;
+        height: 40px;
+    }
+
+    #navbar li { 
+      margin:1%;
+      display: inline-block;
+      width:22%;
+      padding:2% 0;
+      font-size: 12px;
+      margin-top: 10%;
+    }    
+
+     #navbar li#n1,li#n2,li#n3,li#n4 {
+       margin-top: 5%;
+     }
+
+
+    #navbar li#n4 ul li{
+       width: 100%;
+      }
+}
+
+
+@media(max-width: 550px){
+    #navbar li img{
+         width: 40px;
+         height: 40px;
+    }
+    
+   #navbar li { 
+        margin:6% auto;
+        display: block;
+        width:80%;
+        padding:2% 0;
+        font-size: 12px;
+        margin-top: 10%;
+    }    
+        
+        
+ #navbar li ul li{
+     display: block;
+     vertical-align: middle;
+     width: 150%;
+     background-color: #006633;
+ }   
+ 
+ 
+    #navbar li ul li:hover{
+      background-color:  #12af49;
+    }
+   
+    #log,#Text-Tit{
+       display: block;
+       width: 100%;
+    }
+    
+   
+    
+    #cabecera span.titulo2{
+         font-size:20px;
+        }
+        
+        #cabecera span.text_small{
+         font-size:15px;
+        }    
+      
+  
+        
+   #navbar li ul li{
+     width: 100%;
+    }
+        
+        
+}
